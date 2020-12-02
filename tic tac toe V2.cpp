@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 char matrix[3][3] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-char igrach = 'X';
+char player = 'X';
 int n;
 void Draw()
 {
@@ -19,7 +19,7 @@ void Draw()
 void Input()
 {
     int a;
-    cout << "Red e na " << igrach << " Napishete na koi nomer iskate da postavite znak: ";
+      cout << "It's " << player << " turn. " << "Press the number of the field: ";
     cin >> a;
 
  
@@ -27,90 +27,90 @@ void Input()
     if (a == 1)
     {
         if (matrix[0][0] == '1')
-            matrix[0][0] = igrach;
+            matrix[0][0] = player;
         else
         {
-            cout << "tova mqsto veche se izpolzva!" << endl;
+         cout << "Field is already in use try again!" << endl;
             Input();
         }
     }
     else if (a == 2)
     {
         if (matrix[0][1] == '2')
-            matrix[0][1] = igrach;
+            matrix[0][1] = player;
         else
         {
-            cout << "tova mqsto veche se izpolzva!" << endl;
+            cout << "Field is already in use try again!" << endl;
             Input();
         }
     }
     else if (a == 3)
     {
         if (matrix[0][2] == '3')
-            matrix[0][2] = igrach;
+            matrix[0][2] = player;
         else
         {
-            cout << "tova mqsto veche se izpolzva!" << endl;
+       cout << "Field is already in use try again!" << endl;
             Input();
         }
     }
     else if (a == 4)
     {
         if (matrix[1][0] == '4')
-            matrix[1][0] = igrach;
+            matrix[1][0] = player;
         else
         {
-            cout << "tova mqsto veche se izpolzva!" << endl;
+         cout << "Field is already in use try again!" << endl;
             Input();
         }
     }
     else if (a == 5)
     {
         if (matrix[1][1] == '5')
-            matrix[1][1] = igrach;
+            matrix[1][1] = player;
         else
         {
-            cout << "tova mqsto veche se izpolzva!" << endl;
+        cout << "Field is already in use try again!" << endl;
             Input();
         }
     }
     else if (a == 6)
     {
         if (matrix[1][2] == '6')
-            matrix[1][2] = igrach;
+            matrix[1][2] = player;
         else
         {
-            cout << "tova mqsto veche se izpolzva!" << endl;
+        cout << "Field is already in use try again!" << endl;
             Input();
         }
     }
     else if (a == 7)
     {
         if (matrix[2][0] == '7')
-            matrix[2][0] = igrach;
+            matrix[2][0] = player;
         else
         {
-            cout << "tova mqsto veche se izpolzva!" << endl;
+      cout << "Field is already in use try again!" << endl;
             Input();
         }
     }
     else if (a == 8)
     {
         if (matrix[2][1] == '8')
-            matrix[2][1] = igrach;
+            matrix[2][1] = player;
         else
         {
-            cout << "tova mqsto veche se izpolzva!" << endl;
+      cout << "Field is already in use try again!" << endl;
             Input();
         }
     }
     else if (a == 9)
     {
         if (matrix[2][2] == '9')
-            matrix[2][2] = igrach;
+            matrix[2][2] = player;
         else
         {
-            cout << "tova mqsto veche se izpolzva!" << endl;
+      cout << "Field is already in use try again!" << endl;
             Input();
         }
         
@@ -119,7 +119,7 @@ void Input()
  else if (a>=10)
     {
        
-            cout << "Ami ne moje da slagash tam!" << endl;
+            cout << "Can't place there" << endl;
             Input();
         
         
@@ -129,14 +129,14 @@ void Input()
 }
 void TogglePlayer()
 {
-    if (igrach == 'X')
-        igrach = 'O';
+    if (player == 'X')
+        player = 'O';
     else
-        igrach = 'X';
+        player = 'X';
 }
 char Win()
 {
-    //purvi igrach
+    //purvi player
     if (matrix[0][0] == 'X' && matrix[0][1] == 'X' && matrix[0][2] == 'X')
         return 'X';
     if (matrix[1][0] == 'X' && matrix[1][1] == 'X' && matrix[1][2] == 'X')
@@ -162,7 +162,7 @@ char Win()
 
  
 
-    //vtori igrach
+    //vtori player
     if (matrix[0][0] == 'O' && matrix[0][1] == 'O' && matrix[0][2] == 'O')
         return 'O';
     if (matrix[1][0] == 'O' && matrix[1][1] == 'O' && matrix[1][2] == 'O')
@@ -193,9 +193,9 @@ char Win()
 int main()
 {
     int nstart;
-    cout << "Tova e Morski shah"<< endl;
-    cout << "Natisni 1 da zapochnesh"<< endl;
-    cout << "Natisni 0 za da zatvorish programata"<<endl;
+    cout << "This is Tic-Tac-Toe"<< endl;
+    cout << "Press 1 to start"<< endl;
+    cout << "Press 0 to start"<<endl;
     cin >> nstart;
     if(nstart==1){
         n = 0;
@@ -207,17 +207,17 @@ int main()
             Draw();
             if (Win() == 'X')
             {
-                cout << "X pecheli!" << endl;
+                cout << "X wins!" << endl;
                 break;
             }
             else if (Win() == 'O')
             {
-                cout << "O pechelo!" << endl;
+                cout << "O wins!" << endl;
                 break;
             }
             else if (Win() == '/' && n == 9)
             {
-                cout << "na ravno" << endl;
+                cout << "draw" << endl;
                 break;
             }
             TogglePlayer();
