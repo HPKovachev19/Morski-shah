@@ -136,7 +136,7 @@ void TogglePlayer()
 }
 char Win()
 {
-    //purvi player
+    //first player
     if (matrix[0][0] == 'X' && matrix[0][1] == 'X' && matrix[0][2] == 'X')
         return 'X';
     if (matrix[1][0] == 'X' && matrix[1][1] == 'X' && matrix[1][2] == 'X')
@@ -162,7 +162,7 @@ char Win()
 
  
 
-    //vtori player
+    //second player
     if (matrix[0][0] == 'O' && matrix[0][1] == 'O' && matrix[0][2] == 'O')
         return 'O';
     if (matrix[1][0] == 'O' && matrix[1][1] == 'O' && matrix[1][2] == 'O')
@@ -195,7 +195,7 @@ int main()
     int nstart;
     cout << "This is Tic-Tac-Toe"<< endl;
     cout << "Press 1 to start"<< endl;
-    cout << "Press 0 to start"<<endl;
+    cout << "Press 0 to close"<<endl;
     cin >> nstart;
     if(nstart==1){
         n = 0;
