@@ -24,5 +24,8 @@ The game requires skills such as: strategy; tactics and observations.
 -This is a game, which was mainly created for fun, and developing different skills. As we already said after the starting of the application, the app is showing a menu. 
  Then you press “1 ” to start the Tic-Tac-Toe game and after that you choose to be “X” or ”O”. U have to order the Os and Xs in either horizontal, vertical or diagonal row so 
  you can win.If none of the players wins the program will show you “draw”. 
+<<<<<<< HEAD:Readme!.md
 
 link to presentation: https://codingburgas-my.sharepoint.com/:p:/g/personal/knpazlamachev19_codingburgas_bg/Ea7Te_0ySpxDsKtpqDQ1EdEBTYY4hS-eoK_ezQHGmYD13A?e=WqPgzY
+=======
+>>>>>>> 7e18f023f0614ca2b7213f175965e8255baa0722:README.md
